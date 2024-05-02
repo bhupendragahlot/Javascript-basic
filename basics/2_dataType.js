@@ -4,6 +4,7 @@ let name = "bhupendra"
 let age = 22
 let login = false
 
+console.log(age)
 
 // dataTypes:
 
