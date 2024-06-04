@@ -43,3 +43,4 @@ const user = {
 const addnum2 =(num1,num2) =>({username:"bhupendra"}) 
 console.log(addnum2(7,2));
 
+
