@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html event</title>
+</head>
+
+<body>
+    <h2>images</h2>
+    <ul id="images">
+        <li>
+            <img width="200px" id="bmw"
+                src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="bmw">
+        </li>
+        <li>
+            <img width="200px" id="jeep"
+                src="https://images.pexels.com/photos/119435/pexels-photo-119435.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="">
+        </li>
+        <li>
+            <img width="200px" id="dodge"
+                src="https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
+        </li>
+        <li>
+            <a style="font-size: 30px;" id="google" href="http://google.com">google</a>
+        </li>
+
+    </ul>
+</body>
+<script>
+    // document.getElementById('bmw').onclick = function() {
+    //     alert("bmw clicked");}
+
+
+    //attachEvent()
+
+    //type, timestamp,defaultPrevented
+    // target, toElement. srcElement, currentTarget,
+    // clintX, clintY,dcreenX,screenY
+    // altKet,ctrlKey,shiftKey,KeyCode
+
+
+
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     // alert('bmw clicked ');
+    //     console.log("click inside the ul");
+    // }, false);
+
+    // document.getElementById('bmw').addEventListener('click', function(e) {
+    //     console.log("click bmw");
+    //     e.stopPropagation();
+    // }, false);
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //    console.log('google click');
+    // },false)
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        // console.log(e.target.parentNode);
+        console.log(e.target.trgName);
+if(e.target.trgName === 'IMG'){
+    console.log(e.target.id);
+    let removeit = e.target.parentNode
+    removeit.remove()
+}
+  // removeit.parentNode.removeChild(removeit)
+
+    })
+
+
+</script>
+
+</html>
