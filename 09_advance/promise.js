@@ -51,9 +51,11 @@ const PromiseFour = new Promise(function (resolve, reject) {
 PromiseFour.then((user) => {
     console.log(user);
     return user.username;
-}).then((username)=>{
+})
+.then((username)=>{
 console.log(username);
-}).catch(function(error){
+})
+.catch(function(error){
     console.log(error);
 })
-
+.finally("promise is either resolved or rejected ")
